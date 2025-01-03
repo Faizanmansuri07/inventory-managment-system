@@ -70,6 +70,17 @@
 
 </head>
 <body>
+
+  <div class="container">
+    <p id="close">&times;</p>
+    <div class="edit-card">
+      <h3 class="header">Edit inventory</h3>
+      <input type="text" id="name" placeholder="Enter product name" required>
+      <input type="number" id="perPrice" placeholder="Enter per. unit price" required>
+      <input type="number" id="qtyNumber" placeholder="Enter quantity" required>
+      <button id="addCutsomer">Add Customer</button>
+  </div>
+  </div>
     
     <!-- header -->
         <div class="header">
@@ -83,25 +94,25 @@
         <!-- main container -->
         <div class="main-container">
                 <div class="left-container">
-                        <div class="icons">
-                                <div class="icon">
-                                    <ion-icon name="home-outline"></ion-icon>
-                                    <p id="icon-name">Home</p>
-                                </div>
-                                
-                                <div class="icon">
-                                    <ion-icon name="bag-handle-outline"></ion-icon>
-                                    <p id="icon-name">Inventory</p>
-                                </div>
-
-                                <div class="icon">
-                                    <ion-icon name="add-circle-outline"></ion-icon>
-                                    <p id="icon-name">Add item</p>
-                                </div>
-                        </div>
+                  <div class="icons">
+                    <div class="icon">
+                        <ion-icon name="home-outline"></ion-icon>
+                        <p class="icon-name"  id="icon-name">Home</p>
+                    </div>
+                    <div class="icon">
+                        <ion-icon name="bag-handle-outline"></ion-icon>
+                        <p class="icon-name"  id="icon-name">Inventory</p>
+                    </div>
+                    <div class="icon">
+                        <ion-icon name="add-circle-outline"></ion-icon>
+                        <p class="icon-name"  id="icon-name">Add item</p>
+                    </div>
+                </div>
+                
                 </div>
 
                 <div class="right-container">
+                  <div class="sub-right">
                     <div class="dashboard">
                             <div class="frame">
                                         <img src="images/box (3).png" alt="" id="icon">
@@ -179,8 +190,9 @@
                     <!-- table -->
 
                     <div class="table-container">
+
                         <h3>Low stock items</h3>
-                        <table>
+                        <table id="td1">
                           <thead>
                             <tr>
                             <th>Image</th>
@@ -204,9 +216,93 @@
                           </tbody>
                         </table>
                       </div>
-
-                </div>
         </div>
+                      
+
+                      <!-- Inventory -->
+
+                      <div class="inventory">
+                        <div class="in-header">
+                          <p>Inventory</p>
+                          <img src="images/checklists (1).png" alt="">
+                        </div>
+
+                        <div class="search-section">
+                          <select name="" id="inse">
+                            <option value="">All categories</option>
+                          </select>
+                          <div class="search">
+                          <input type="text" class="searchVal" placeholder="Filter inventory">
+                          <ion-icon name="search-outline"></ion-icon>
+                          </div>
+
+                    </div>
+                    <div class="table-container">
+                      <table>
+                        <thead>
+                          <tr>
+                            <th>Ord. Id</th>
+                            <th>Item Name</th>
+                            <th>Item Image</th>
+                            <th>Per. unit price</th>
+                            <th>Category</th>
+                            <th>Qty</th>
+                            <th>Total Amount</th>
+                            <th>Instock</th>
+                            <th>Operations</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                              <td>101</td>
+                              <td>Shampoo</td>
+                              <td>xyz</td>
+                              <td>150</td>
+                              <td class="ctgry">
+                                dffd
+                              </td>
+                              <td>20</td>
+                              <td>2000</td>
+                              <td>
+                                abcd
+                              </td>
+                              <td class="ops">
+                                  <div class="op" id="op1"><ion-icon name="create-outline"></ion-icon></div>
+                                  <div class="op" id="op2"><ion-icon name="close-outline"></ion-icon></div>
+                              </td>
+                            </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                  
+                
+                  <div class="add-items-iv">
+                    <div class="in-header">
+                      <p>Add items to inventory</p>
+                      <img src="images/checklists (1).png" alt="">
+                    </div>
+                    <div class="add">
+
+                      <div class="upload">
+                        <img id="imagePreview" alt="Your Image Will Appear Here">
+                        <input type="file" id="imageUpload" accept="image/*" placeholder="r">
+                      </div>
+                      <div class="inventory-form">
+                              <input type="number" id="id" placeholder="Enter Id">
+                              <input type="text" id="name" placeholder="Enter name" required>
+                              <input type="text" id="name-ctgry" placeholder="Enter Category name">
+                              <select name="" id="category">
+                                <option value="">Select category</option>
+                              </select>
+                              <input type="text" id="per-price" placeholder="Enter per unit price">
+                              <input type="text" id="total-unit" placeholder="Enter total units">
+                              <button>Add to inventory</button>
+                      </div>
+                      </div>
+                  </div>
+              </div>    
+            </div>
 
     <script src="assets/script/script.js"></script>
 
