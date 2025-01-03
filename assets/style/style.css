@@ -1,0 +1,427 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: poppins;
+    box-sizing: border-box;
+    /* border: 2px solid; */
+}
+
+/* ================
+variables
+================ */
+
+:root {
+    --primary-color : #ccc;
+}
+
+body {
+    background-color: #f5f5f5;
+}
+
+/* ========================
+header
+======================== */
+
+.header  {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* background-color: #EAF3FF ; */
+    padding: 30px 50px;
+}
+
+.header ion-icon {
+    display: none;
+}
+.header .name {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #4361EE;
+}
+
+.header .user{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.header .user .user-name{
+    color: #333333;
+    font-weight: 500;
+    font-size: 1rem;
+}
+.header .user-icon {
+    width: 45px;
+}
+
+/* main container */
+
+.main-container {
+    display: flex;
+    width: 100%;
+    /* height: 92vh; */
+}
+
+.main-container .right-container {
+    background-color: #d1e5fe;
+    /* height: 92vh; */
+    width: 100%;
+    padding: 30px 30px;
+    border-radius: 8px;
+
+}
+
+
+.main-container .left-container {
+    padding-left: 30px;
+    padding-top: 20px;
+    background-color: #f5f5f5;
+    width: 17%;
+    height: 92vh;
+}
+
+
+.main-container .left-container .icons {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.main-container .left-container .icons .icon:nth-child(1) {
+    background-color: #d1e5fe;
+    color: #333333;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    
+}
+
+
+.main-container .left-container .icons .icon {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    width: 100%;
+    padding: 20px 20px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    color: #4361EE;
+}
+.main-container .left-container .icons .icon ion-icon {
+    font-size: 1.4rem;
+}
+
+.main-container .right-container .dashboard {
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
+    gap: 30px;
+    width: 100%;
+}
+
+
+.main-container .right-container .dashboard  .frame{
+    /* width: 290px; */
+    background-color: #fff;
+    padding: 20px 20px;
+    border-radius: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+}
+
+.main-container .right-container .dashboard  .frame #icon {
+    width: 60px;
+    height: 60px;
+    /* background-color: #dae4f0; */
+
+}
+
+.main-container .right-container .dashboard  .frame p {
+    font-weight: 500;
+    color: #555;
+}
+
+.main-container .right-container .dashboard  .frame .txt:nth-child(2) {
+    font-weight: 600;
+}
+
+
+/* ======================
+graphs
+====================== */
+
+.right-container .graphs {
+    width: 100%;
+
+}
+
+.right-container .graphs {
+    display: flex;
+    /* align-items: center; */
+    gap: 36px;
+}
+
+.right-container .graphs .graph-lines {
+    width: 79.8%;
+    /* height: 350px; */
+    background-color: #fff;
+    margin-top: 20px;
+    border-radius: 13px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+}
+
+.right-container .graphs .pi-chart {
+    width: 18%;
+    height: 350px;
+    background-color: #fff;
+    margin-top: 20px;
+    border-radius: 13px;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+}
+
+
+.right-container .graphs .graph-lines .line {
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+ }
+
+ .right-container .graphs .graph-lines .pi {
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+ }
+
+
+.right-container .graphs .pi-chart .details {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.right-container .graphs .pi-chart .details .detail {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* ==================
+table
+================== */
+.right-container .table-container {
+    width: 100%;
+    background: #fff;
+    padding: 20px;
+    border-radius: 13px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* max-width: 600px; */
+    margin-top: 20px;
+    height: 320px;
+    overflow-x: auto;
+
+  }
+
+  .table-container h3 {
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+  }
+
+  .right-container .table-container table {
+    width: 100%;
+    /* height: 100%; */
+    border-collapse: collapse;
+    text-align: left;
+    overflow-x: auto;
+  }
+
+  th, td {
+    padding: 12px;
+    border-bottom: 1px solid #e0e0e0;
+  }
+
+  th {
+    color: #555;
+    font-weight: 600;
+  }
+
+  tr:hover {
+    background-color: #f5f5f5;
+  }
+
+  td {
+    color: #666;
+  }
+
+  td:last-child {
+    font-weight: bold;
+    color: #333;
+  }
+
+
+  /* media query for large device */
+
+  @media(max-width : 1290px) {
+    .main-container .right-container {
+        width: 92%;
+    }
+    .main-container .left-container {
+        padding-left: 10px;
+        width: 8%;
+
+    }
+
+    .right-container .graphs .graph-lines {
+        overflow: hidden;
+    }
+
+    .right-container .graphs .pi-chart {
+        overflow: hidden;
+    }
+
+    .main-container .right-container .dashboard {
+        display: flex;
+        align-items: center;
+
+        gap: 20px;
+    }
+
+    .main-container .right-container .dashboard  .frame {
+        gap: 10px;
+    }
+
+    .main-container .left-container .icons #icon-name {
+        display: none;
+    }
+
+    .right-container .graphs .graph-lines #curve_chart {
+        width: 100%;
+    }
+  }
+
+  @media(max-width : 1170px) {
+    .right-container .graphs .pi-chart .details .detail {
+        font-size: 0.8rem;
+    }
+    .right-container .graphs .graph-lines {
+        width: 70%;
+    }
+    .right-container .graphs  .pi-chart {
+        width: 30%;
+    }
+    .main-container .right-container .dashboard {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .main-container .right-container .dashboard .frame {
+        /* width: 40%; */
+        /* width: 300px; */
+    }
+  }
+
+  @media(max-width : 930px) {
+    .main-container .left-container {
+        width: 10%;
+    }
+    .main-container .left-container .icons .icon {
+        padding: 10px;
+    }
+    .right-container .graphs .graph-lines {
+        width: 60%;
+    }
+    .right-container .graphs  .pi-chart {
+        width: 40%;
+    }
+  }
+
+
+  @media(max-width: 545px) {
+
+
+    .header {
+        padding: 0px 20px;
+    }
+    .header ion-icon {
+        display: block;
+        font-size: 2rem;
+        color: #4361EE;
+    }
+    .main-container {
+        display: flex;
+        flex-direction: column;
+        height: 300px;
+    }
+    .main-container .left-container {
+        width: 100%;
+        /* height: 100vh; */
+        position: fixed;
+        width: 100%;
+        height: 60px;
+        padding: 0;
+        bottom: 20px;
+        z-index: 3;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: transparent;
+    }
+
+    .main-container .right-container {
+        width: 100%;
+    }
+    .main-container .left-container .icons {
+        margin-top: 0;
+        display: flex;
+        flex-direction: row;
+        gap: 40px;
+        background-color: red;
+        width: 85%;
+        padding: 5px 20px;
+        background-color: transparent;
+        backdrop-filter: blur(100px);
+        border-radius: 7px;
+        border: 2px solid #ddd;
+    }
+    .main-container .left-container .icons .icon:nth-child(1)  {
+        background-color: transparent;
+        box-shadow: none;
+    }
+
+
+
+    .main-container .right-container .dashboard .frame{
+        width: 100%;
+        display: flex;
+        gap: 30px;
+       /* align-items: center;
+        justify-content: space-between;
+        padding: 20px 50px; */
+    }
+    .right-container .graphs {
+        display: flex;
+        flex-direction: column;
+    }
+    .right-container .graphs .graph-lines {
+        width: 100%;
+        height: 400px;
+    }
+    .right-container .graphs  .pi-chart {
+        width: 100%;
+        margin-top: 0;
+    }
+  }
